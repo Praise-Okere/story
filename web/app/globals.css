@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-heading: var(--heading);
+  --color-card-title: var(--card-title);
+  --color-header: var(--header);
+  --color-brand-from: var(--brand-from);
+  --color-brand-to: var(--brand-to);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* Dark navy-violet studio palette with magenta accents. The app is dark-only,
+   so :root and .dark share the same values. */
+:root,
+.dark {
+  --background: #110d22;
+  --foreground: #f4f1ff;
+  --card: #1e1a2e;
+  --card-foreground: #f4f1ff;
+  --popover: #221d35;
+  --popover-foreground: #f4f1ff;
+  --primary: #ff4fd8;
+  --primary-foreground: #1a0a1c;
+  --secondary: #c42fb5;
+  --secondary-foreground: #ffffff;
+  --muted: #2b2640;
+  --muted-foreground: #b8b2cc;
+  --accent: #2b2640;
+  --accent-foreground: #f4f1ff;
+  --destructive: #ff6b81;
+  --border: #36304d;
+  --input: #4d4763;
+  --ring: #ff4fd8;
+  --heading: #ff4fd8;
+  --card-title: #e6dcff;
+  --header: #0b0915;
+  --brand-from: #22c3ee;
+  --brand-to: #8b2cf5;
+  --chart-1: #ff4fd8;
+  --chart-2: #8b2cf5;
+  --chart-3: #22c3ee;
+  --chart-4: #c42fb5;
+  --chart-5: #6d5ad6;
+  --radius: 0.75rem;
+  --sidebar: #0b0915;
+  --sidebar-foreground: #f4f1ff;
+  --sidebar-primary: #ff4fd8;
+  --sidebar-primary-foreground: #1a0a1c;
+  --sidebar-accent: #2b2640;
+  --sidebar-accent-foreground: #f4f1ff;
+  --sidebar-border: #36304d;
+  --sidebar-ring: #ff4fd8;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
